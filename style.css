@@ -5,11 +5,11 @@
     padding:0;
     box-sizing:border-box;
     font-family: "Poppins", serif;
-    overflow-y:hidden;
+  
 
 }
 nav{
-    position:fixed;
+    position:sticky;
     top:0;
     left:0;
     display:flex;
@@ -19,13 +19,18 @@ nav{
     width:100%;
     padding:15px;
     z-index: 10;
+    background-color: rgb(255, 255, 255);
 
 }
 nav ul li{
     list-style: none;
     display:inline-block;
     margin:10px 20px;
+    
 }
+
+   
+
 nav .logo{
     width:74px;
     height:auto;
@@ -36,8 +41,10 @@ nav .logo{
     color:black;
     background:rgb(250, 237, 49);
     border-radius: 35px;
-    padding:10px 20px;
+    padding:10px 10px;
     cursor: pointer;
+    transition: transform 0.3s ease,background-color 0.3,color 0.3s;
+
 
 }
 .nav-btn img{
@@ -64,12 +71,13 @@ nav .logo{
 
 }
 .header button{
-    background:yellow ;
+    background:rgb(255, 255, 255) ;
     border:0;
     box-shadow: 0px 5px 0px 0px ;
     border-radius: 35px;
-    padding:10px 10px 10px 10px;
+    padding:5px 10px 5px 10px;
     font-size:18px;
+    gap:5px;
 }
 .header p{
     margin-top:10px;
@@ -80,10 +88,67 @@ nav .logo{
    
     width:25px;
    
-  
-    
+
 
 }
 .other{
     width:20px;
+}
+.animate{
+    transition: transform  0.3s;
+}
+.animate:hover{
+    transform: translateY(10px);
+   
+   
+}
+button{
+    background:transparent;
+    border-radius: 35px;
+    display:inline-flex;
+    padding:15px ;
+  
+flex-direction: row;
+
+}
+
+ul li button{
+    padding:10px 10px;
+    transition: transform 0.3s ease,background-color 0.3,color 0.3s;
+    cursor:pointer;
+}
+ul li button:hover{
+    transform: translateY(-5px);
+    background-color: black;
+    color:white;
+}
+.nav-btn:hover{
+    transform: translateY(-5px);
+    background-color: rgb(255, 255, 255);
+    
+}
+
+@keyframes slidein {
+    from{
+        transfrom: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+h1 {
+    animation: slidein 3s ease-in forwards ;
+    text-wrap: nowrap;
+    transform:translateX(-150px);
+    transition: text-shadow 
+
+}
+.grinchy{
+    margin-bottom:0;
+    padding:0;
+    bottom:0;
+
+}
+footer{
+    margin:0;
 }
